@@ -1,0 +1,83 @@
+PROVA — SISTEMA DI GESTIONE VISITE OSPEDALIERE
+===============================================
+
+DURATA: 4 ore
+
+
+OBIETTIVO
+---------
+Realizzare una web application Java con Servlet, JSP e Hibernate (o JDBC se preferite) che permetta
+di gestire i medici di un ospedale e registrare le visite dei pazienti.
+
+
+MODELLO ER
+----------
+
+  PAZIENTI               MEDICI
+  --------               ------
+  id (PK)                id (PK)
+  nome                   nome
+  email                  specializzazione
+
+
+  VISITE
+  ------
+  id (PK)
+  paziente_id   (FK → pazienti.id)
+  medico_id     (FK → medici.id)
+  data_visita
+  descrizione
+
+
+CLASSI JAVA (package it.ospedale)
+-----------------------------------
+
+model/
+  Paziente.java
+    - attributi: id, nome, email (usare validazione email)
+
+  Medico.java
+    - attributi: id, nome, specializzazione
+
+  Visita.java
+    - attributi: id, paziente, medico, dataVisita, descrizione
+
+dao/
+  PazienteDAO.java   → inserisci, trovaTutti, trovaPerId
+  MedicoDAO.java     → inserisci, trovaTutti, trovaPerId, trovaPerSpecializzazione
+  VisitaDAO.java     → inserisci
+
+servlet/
+  MediciServlet      → GET /medici  (con filtro ?specializzazione=X)
+  VisitaServlet      → GET /visita (mostra form) + POST /visita (salva)
+
+jsp/
+  medici.jsp         → tabella medici con filtri per specializzazione
+  visita.jsp         → form con select medico, select paziente, textarea descrizione
+
+
+
+
+PASSI DA SEGUIRE
+-----------------
+
+1. Creare il database "ospedale" su MySQL (solo il database,
+   le tabelle le crea Hibernate automaticamente al primo avvio).
+
+2. Configurare HibernateUtil.java con le proprie credenziali.
+
+3. Creare i tre model con le annotazioni Hibernate.
+
+4. Creare i tre DAO.
+
+5. Creare MediciServlet.
+
+6. Creare VisitaServlet.
+
+7. Avviare su Jetty e testare il flusso
+
+
+AVVIO DEL PROGETTO
+- URL principali:
+    http://localhost:8080/ospedale/medici
+    http://localhost:8080/ospedale/visita
