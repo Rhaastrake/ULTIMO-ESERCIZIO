@@ -11,3 +11,5 @@ ospedale/medici
 ospedale/lista-visite
 ospedale/nuova-visita
 
+
+Ho svuotato la password del db perché usando laragon dava un errore strano
