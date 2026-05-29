@@ -1,0 +1,9 @@
+it\negozio\dao\ClienteDAO.class
+it\negozio\model\Prodotto.class
+it\negozio\model\Ordine.class
+it\negozio\servlet\OrdineServlet.class
+it\negozio\servlet\ProdottiServlet.class
+it\negozio\dao\OrdineDAO.class
+it\negozio\model\Cliente.class
+it\negozio\dao\ProdottoDAO.class
+it\negozio\db\DatabaseManager.class

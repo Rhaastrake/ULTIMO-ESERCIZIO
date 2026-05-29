@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Biblioteca Web</display-name>
+
+    <!-- Servlet web (dal giorno 6) -->
+    <servlet>
+        <servlet-name>LibriServlet</servlet-name>
+        <servlet-class>it.biblioteca.servlet.LibriServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibriServlet</servlet-name>
+        <url-pattern>/libri</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PrestitoServlet</servlet-name>
+        <servlet-class>it.biblioteca.servlet.PrestitoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrestitoServlet</servlet-name>
+        <url-pattern>/prestito</url-pattern>
+    </servlet-mapping>
+
+    <!-- REST API (giorno 7) -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>it.biblioteca.rest.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/api/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LibriApiServlet</servlet-name>
+        <servlet-class>it.biblioteca.rest.LibriApiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibriApiServlet</servlet-name>
+        <url-pattern>/api/libri</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PrestitiApiServlet</servlet-name>
+        <servlet-class>it.biblioteca.rest.PrestitiApiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrestitiApiServlet</servlet-name>
+        <url-pattern>/api/prestiti</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>libri.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

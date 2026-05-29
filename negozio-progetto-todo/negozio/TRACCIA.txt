@@ -1,0 +1,94 @@
+ESERCIZIO — SISTEMA DI GESTIONE ORDINI (NEGOZIO)
+=================================================
+
+OBIETTIVO
+---------
+Realizzare una web application Java con Servlet, JSP e JDBC che permetta di
+gestire il magazzino di un negozio e creare ordini.
+
+
+MODELLO ER
+----------
+
+  CLIENTI                PRODOTTI
+  --------               --------
+  id (PK)                id (PK)
+  nome                   nome
+  email                  categoria
+                         prezzo
+                         quantita
+
+
+  ORDINI
+  ------
+  id (PK)
+  cliente_id        (FK → clienti.id)
+  prodotto_id       (FK → prodotti.id)
+  quantita_ordinata
+  data_ordine
+
+
+CLASSI JAVA (package it.negozio)
+----------------------------------
+
+model/
+  Prodotto.java
+    - attributi: id, nome, categoria, prezzo (double), quantita (int)
+    - solo getter e setter, nessuna logica di business
+    - toString() per la visualizzazione
+
+  Cliente.java
+    - attributi: id, nome, email
+    - validazione email nel costruttore
+
+  Ordine.java
+    - attributi: id, cliente, prodotto, quantitaOrdinata, dataOrdine
+    - getTotale() → prezzo * quantitaOrdinata
+    - il costruttore assegna solo i campi, non modifica nulla
+
+dao/
+  ProdottoDAO.java  → inserisci, trovaTutti, trovaPerId,
+                       trovaPerCategoria, trovaDisponibili
+  ClienteDAO.java   → inserisci, trovaTutti, trovaPerId
+  OrdineDAO.java    → inserisci (con transazione), trovaTutti
+
+servlet/
+  ProdottiServlet   → GET /prodotti  (con filtri ?categoria=X e ?solo=disponibili)
+  OrdineServlet     → GET /ordine (mostra form) + POST /ordine (salva ordine)
+
+jsp/
+  prodotti.jsp  → tabella con badge colorato in base alla quantità
+  ordine.jsp    → form con select prodotto, select cliente, input quantità
+
+
+
+------------------------------------------------
+
+E il DAO con una transazione:
+aggiorna prima le scorte, poi inserisce l'ordine. Se qualcosa va storto
+viene fatto il rollback di entrambe le operazioni.
+
+
+
+COSA FARE
+-----------------------------
+
+1. Creare il database eseguendo negozio.sql su MySQL.
+
+2. Configurare DatabaseManager.java con le proprie credenziali.
+
+3. Prodotto.java, Cliente.java
+
+4. Ordine.java
+
+5. DAO
+
+6. Servlet
+
+
+
+
+- Context path: /negozio
+- URL principali:
+    http://localhost:8080/negozio/prodotti
+    http://localhost:8080/negozio/ordine
