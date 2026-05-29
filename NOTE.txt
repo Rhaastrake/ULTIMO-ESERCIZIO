@@ -1,0 +1,13 @@
+Ho voluto aggiungere un .env per non lasciare le credenziali del db nel codice utilizzato la dipendenza cdimascio (per la classe Dotenv)
+
+Aggiunto endpoint per vedere tutte le visite (ospedale/lista-visite) + nuovo jps ovviamente
+
+Ho modificato il nome di visita in nuova-visita per non creare confusione
+
+Modificato gli href nei jsp
+
+ENDPOINTS:
+ospedale/medici
+ospedale/lista-visite
+ospedale/nuova-visita
+

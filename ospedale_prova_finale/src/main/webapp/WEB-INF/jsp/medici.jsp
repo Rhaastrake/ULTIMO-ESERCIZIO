@@ -28,8 +28,8 @@
 
 <h1>🏥 Ospedale — Medici</h1>
 <div class="nav">
-    <a href="${pageContext.request.contextPath}/medici">Tutti i medici</a>
-    <a href="${pageContext.request.contextPath}/visita">+ Nuova Visita</a>
+    <a href="${pageContext.request.contextPath}/lista-visite">Lista visite</a>
+    <a href="${pageContext.request.contextPath}/nuova-visita">Nuova Visita</a>
 </div>
 
 <c:if test="${param.messaggio == 'visita_creata'}">

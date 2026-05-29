@@ -28,7 +28,8 @@
 
 <h1>🏥 Ospedale — Nuova Visita</h1>
 <div class="nav" style="margin-bottom:20px;">
-    <a href="${pageContext.request.contextPath}/medici">← Torna ai medici</a>
+    <a href="${pageContext.request.contextPath}/medici">Torna ai medici</a>
+    <a href="${pageContext.request.contextPath}/lista-visite">Lista visite</a>
 </div>
 
 <div class="card">
@@ -45,7 +46,7 @@
         </div>
     </c:if>
 
-    <form action="${pageContext.request.contextPath}/visita" method="post">
+    <form action="${pageContext.request.contextPath}/nuova-visita" method="post">
 
         <label for="medicoId">Medico:</label>
         <select name="medicoId" id="medicoId" required>

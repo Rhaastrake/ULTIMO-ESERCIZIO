@@ -1,9 +1,10 @@
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\dao\MedicoDAO.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\dao\PazienteDAO.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\dao\VisitaDAO.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\hibernate\HibernateUtil.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\model\Medico.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\model\Paziente.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\model\Visita.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\servlet\MediciServlet.java
-C:\Users\SimoneAbate\Downloads\ospedale\src\main\java\it\ospedale\servlet\VisitaServlet.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\dao\MedicoDAO.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\dao\PazienteDAO.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\dao\VisitaDAO.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\db\DBManager.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\model\Medico.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\model\Paziente.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\model\Visita.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\servlet\ListaVisiteServlet.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\servlet\MediciServlet.java
+C:\Users\A440apulia\Desktop\ULTIMI PROGETTI\ospedale_prova_finale\src\main\java\it\ospedale\servlet\VisitaServlet.java
